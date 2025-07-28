@@ -1,0 +1,327 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f3e5cf, #e9e1d4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Changed height to min-height for better content handling */
+  color: #333; /* Default text color for light theme */
+}
+
+/* Dark theme for body */
+html.dark body {
+  background: linear-gradient(135deg, #2d3748, #1a202c); /* Darker gradient */
+  color: #e2e8f0; /* Lighter text for dark theme */
+}
+
+.container {
+  background: #EEEEEE;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  width: 400px;
+}
+
+/* Dark theme for container */
+html.dark .container {
+  background: #39465a; /* Darker background for container */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6); /* Darker shadow */
+}
+
+.logo {
+  text-align: center;
+  color: #b67070;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Dark theme for logo */
+html.dark .logo {
+  color: #8c9eff; /* Adjusted color for dark theme */
+}
+
+.form-box {
+  width: 100%;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  background: none;
+  border: none;
+  font-size: 1em;
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  color: #393E46;
+  transition: color 0.3s ease;
+}
+
+/* Dark theme for tabs buttons */
+html.dark .tabs button {
+  color: #bbbbbb; /* Lighter color for dark theme */
+}
+
+.tabs button.active {
+  border-color: #b67070;
+  font-weight: bold;
+}
+
+/* Dark theme for active tabs button */
+html.dark .tabs button.active {
+  border-color: #8c9eff; /* Adjusted border color for dark theme */
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auth-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff; /* Default input background */
+  color: #333; /* Default input text color */
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Dark theme for input fields */
+html.dark .auth-form input {
+  background: #4a5568; /* Darker input background */
+  border-color: #6b7280; /* Darker border */
+  color: #e2e8f0; /* Lighter text */
+}
+
+.password-box {
+  position: relative;
+}
+
+.password-box input {
+  width: 100%;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+/* Dark theme for password toggle icon */
+html.dark .toggle-password {
+  color: #bbb; /* Lighter color for dark theme */
+}
+
+.terms {
+  font-size: 0.85em;
+  color: #333;
+}
+
+/* Dark theme for terms text */
+html.dark .terms {
+  color: #ccc;
+}
+
+.captcha-box {
+  background: #e6f7f7;
+  border: 1px solid #b2ebf2;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+/* Dark theme for captcha box */
+html.dark .captcha-box {
+  background: #3a475a; /* Darker captcha box background */
+  border-color: #5b677a; /* Darker border */
+}
+
+.captcha-display {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 8px;
+  text-align: center;
+  letter-spacing: 4px;
+  background: #fff;
+  padding: 8px;
+  border-radius: 5px;
+  color: #333; /* Default captcha text color */
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Dark theme for captcha display */
+html.dark .captcha-display {
+  background: #2d3748; /* Darker captcha display background */
+  color: #e2e8f0; /* Lighter text */
+}
+
+.submit-btn {
+  background: #b67070;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #007a85;
+}
+
+/* Dark theme for submit button */
+html.dark .submit-btn {
+  background: #8c9eff; /* Adjusted background for dark theme */
+}
+html.dark .submit-btn:hover {
+  background: #6f7cdb; /* Adjusted hover background for dark theme */
+}
+
+
+.home-btn {
+  background: #c0a573;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+}
+
+.home-btn:hover {
+  background: #e4c895;
+}
+
+/* Dark theme for submit button */
+html.dark .home-btn {
+  background: #8c9eff; /* Adjusted background for dark theme */
+}
+html.dark .home-btn:hover {
+  background: #6f7cdb; /* Adjusted hover background for dark theme */
+}
+
+
+
+
+.divider {
+  text-align: center;
+  position: relative;
+  font-size: 0.85em;
+  color: #777;
+  transition: color 0.3s ease;
+}
+
+/* Dark theme for divider */
+html.dark .divider {
+  color: #999;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: #ccc;
+  transition: background 0.3s ease;
+}
+
+/* Dark theme for divider lines */
+html.dark .divider::before,
+html.dark .divider::after {
+  background: #777; /* Darker lines for dark theme */
+}
+
+
+.social-label {
+  text-align: center;
+  font-size: 0.9em;
+}
+
+/* Dark theme for social label */
+html.dark .social-label {
+  color: #ccc;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons button {
+  border: none;
+  background: #ccc;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.social-icons button:hover {
+  background: #aaa;
+}
+
+/* Dark theme for social icons buttons */
+html.dark .social-icons button {
+  background: #5b677a; /* Darker background */
+  color: #e2e8f0; /* Lighter icon color */
+}
+html.dark .social-icons button:hover {
+  background: #6a768c; /* Darker hover background */
+}
+
+
+.login-link {
+  text-align: center;
+  font-size: 0.85em;
+  color: #333; /* Default link color */
+}
+
+/* Dark theme for login link */
+html.dark .login-link {
+  color: #e2e8f0; /* Lighter link color */
+}
+
+.login-link a {
+    color: #b67070; /* Default link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Dark theme for login link anchor */
+html.dark .login-link a {
+    color: #8c9eff; /* Adjusted link color for dark theme */
+}
+.about-text{
+  text-align: justify !important;
+}
+
+.hidden {
+  display: none;
+}

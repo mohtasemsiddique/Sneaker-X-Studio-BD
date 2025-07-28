@@ -1,0 +1,186 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0d0d0d;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #121212;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+#header a img {
+  height: 60px;
+}
+
+#navbar {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+#navbar li a {
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+#navbar li a.active,
+#navbar li a:hover {
+  color: #00ffc3;
+}
+
+.animated-bg {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(#121212, #000);
+  animation: bgPulse 10s infinite alternate;
+  z-index: -1;
+}
+
+@keyframes bgPulse {
+  0% { background: radial-gradient(#121212, #000); }
+  100% { background: radial-gradient(#1a1a1a, #000); }
+}
+
+.exclusive-container {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.exclusive-container h2 {
+  font-size: 2.5rem;
+  color: #00ffc3;
+  margin-bottom: 30px;
+}
+
+.exclusive-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.exclusive-item {
+  background-color: #1a1a1a;
+  border-radius: 16px;
+  padding: 20px;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 8px rgba(0, 255, 195, 0.1);
+}
+
+.exclusive-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0, 255, 195, 0.4);
+}
+
+.exclusive-item img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.exclusive-item h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.exclusive-item p {
+  color: #b0b0b0;
+  font-size: 0.95rem;
+  margin: 6px 0;
+}
+
+.bid-btn {
+  margin-top: 12px;
+  padding: 10px 20px;
+  background-color: #00ffc3;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  color: #000;
+}
+
+.bid-btn:hover {
+  background-color: #00d1a4;
+}
+
+#celebration-popup {
+  display: none;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px #00ffc3;
+  z-index: 999;
+  text-align: center;
+  color: #121212;
+}
+
+#celebration-popup img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.bid-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.adjust-bid {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  background-color: #00ffc3;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.adjust-bid:hover {
+  background-color: #00d1a4;
+}
+
+.bid-increment {
+  background-color: #1a1a1a;
+  color: #fff;
+  border: 1px solid #00ffc3;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .exclusive-item {
+    width: 90%;
+  }
+  #navbar {
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+  }
+}

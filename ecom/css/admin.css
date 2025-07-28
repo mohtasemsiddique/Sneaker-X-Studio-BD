@@ -1,0 +1,114 @@
+/* admin.css */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  padding: 20px;
+  margin: 0;
+}
+
+h1, h2, h3 {
+  color: #00ffc3;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #1e1e1e;
+  box-shadow: 0 0 8px rgba(0, 255, 195, 0.2);
+}
+
+table, th, td {
+  border: 1px solid #00ffc3;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #00ffc3;
+  color: #000;
+}
+
+td a {
+  color: #00ffc3;
+  text-decoration: none;
+  margin-right: 8px;
+}
+
+td a:hover {
+  text-decoration: underline;
+}
+
+input[type="text"], button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #00ffc3;
+  background-color: #1e1e1e;
+  color: white;
+  margin-top: 10px;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #00ffc3;
+  color: #000;
+}
+
+/* Weather API section */
+.api-data {
+  background: #1a1a1a;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 10px;
+  border: 1px solid #00ffc3;
+}
+
+.api-data p {
+  margin: 5px 0;
+}
+
+/* Navbar matching SneakerXStudio */
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1c1c1c;
+  padding: 15px 30px;
+  border-bottom: 2px solid #00ffc3;
+}
+
+#header img {
+  height: 40px;
+}
+
+#navbar {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+#navbar li {
+  display: inline;
+}
+
+#navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+#navbar a:hover, #navbar a.active {
+  background-color: #00ffc3;
+  color: #000;
+}
